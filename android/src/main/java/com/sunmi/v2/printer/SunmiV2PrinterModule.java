@@ -1,4 +1,4 @@
-package com.sunmi.innerprinter;
+package com.sunmi.v2.printer;
 
 import android.content.BroadcastReceiver;
 
@@ -42,7 +42,7 @@ import android.content.IntentFilter;
 import java.util.Map;
 import java.util.HashMap;
 
-public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
+public class SunmiV2PrinterModule extends ReactContextBaseJavaModule {
     public static ReactApplicationContext reactApplicationContext = null;
     private IWoyouService woyouService;
     private BitmapUtils bitMapUtils;
@@ -81,9 +81,9 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
         }
     };
 
-    private static final String TAG = "SunmiInnerPrinterModule";
+    private static final String TAG = "SunmiV2PrinterModule";
 
-    public SunmiInnerPrinterModule(ReactApplicationContext reactContext) {
+    public SunmiV2PrinterModule(ReactApplicationContext reactContext) {
         super(reactContext);
         reactApplicationContext = reactContext;
         Intent intent = new Intent();
@@ -108,7 +108,7 @@ public class SunmiInnerPrinterModule extends ReactContextBaseJavaModule {
 
     @Override
     public String getName() {
-        return "SunmiInnerPrinter";
+        return "SunmiV2Printer";
     }
 
 

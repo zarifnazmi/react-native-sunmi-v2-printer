@@ -1,45 +1,46 @@
-# react-native-sunmi-inner-printer
+# react-native-sunmi-v2-printer
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/januslo/react-native-sunmi-inner-printer/master/LICENSE) [![npm version](https://badge.fury.io/js/react-native-sunmi-inner-printer.svg)](https://www.npmjs.com/package/react-native-sunmi-inner-printer)
 
 
 http://docs.sunmi.com/htmls/index.html?lang=zh##V1文档资源
 根据商米V1文档开发打印接口
-(React native plugin Referring the sunmi V1 printer document and demos)
+(React native plugin Referring the sunmi V2 printer document and demos)
 
 **Caution: this is not the official project. I share it because I am working on this device but no any official support in react-native It's welcome to ask any question about the usage,problems or feature required, I will support ASAP.**
 
 Offical Demos plz refer: https://github.com/shangmisunmi/SunmiPrinterDemo
 
-for scanner, refer this: https://github.com/januslo/react-native-sunmi-inner-scanner
+for scanner, refer this: https://github.com/suraneti/react-native-sunmi-v2-scanner
 
 ## Installation:
 
 **Step 1.**
 
-install with npm: [Check in NPM](https://www.npmjs.com/package/react-native-sunmi-inner-printer)
+install with npm: [Check in NPM](https://www.npmjs.com/package/react-native-sunmi-v2-printer)
 
 ```bash
-npm install react-native-sunmi-inner-printer --save
+npm install react-native-sunmi-v2-printer --save
 ```
 
 or you may need to install via the clone address directly:
 
-```bash 
-npm install https://github.com/januslo/react-native-sunmi-inner-printer.git --save
+```bash
+npm install https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
 ```
 
 **Step 2:**
 
+For React-Native < 0.60
 Links this plugin to your project.
 
 ```bash
 react-native link react-native-sunmi-inner-printer
 ```
 
-or you may need to link manually 
+or you may need to link manually
 * modify settings.gradle
 
-```javascript 
+```javascript
 include ':react-native-sunmi-inner-printer'
 project(':react-native-sunmi-inner-printer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sunmi-inner-printer/android')
 ```
@@ -47,10 +48,10 @@ project(':react-native-sunmi-inner-printer').projectDir = new File(rootProject.p
 * modify  app/build.gradle,add dependenceie：
 
 ```javascript
-compile project(':react-native-sunmi-inner-printer')
+compile project(':react-native-sunmi-v2-printer')
 ```
 
-* adds package references to  MainPackage.java 
+* adds package references to  MainPackage.java
 
 ```java
 

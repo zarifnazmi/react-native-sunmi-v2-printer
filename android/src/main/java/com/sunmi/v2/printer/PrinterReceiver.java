@@ -1,4 +1,4 @@
-package com.sunmi.innerprinter;
+package com.sunmi.v2.printer;
 
 import android.content.BroadcastReceiver;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -18,8 +18,8 @@ public class PrinterReceiver extends BroadcastReceiver {
         String type = "PrinterStatus";
         Log.d("PrinterReceiver", action);
 
-        if (SunmiInnerPrinterModule.reactApplicationContext != null) {
-            SunmiInnerPrinterModule.reactApplicationContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+        if (SunmiV2PrinterModule.reactApplicationContext != null) {
+            SunmiV2PrinterModule.reactApplicationContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
                     .emit(type, action);
         }
     }

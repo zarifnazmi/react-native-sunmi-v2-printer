@@ -1,7 +1,7 @@
 {
   "name": "react-native-sunmi-v2-printer",
   "version": "2.0.0",
-  "description": "http://docs.sunmi.com/htmls/index.html?lang=zh##V1文档资源 根据商米V1文档开发的蓝牙打印for React Native.",
+  "description": "Sunmi V2 Printer for React-Native",
   "author": "Suraneti Rodsuwan <suraneti.rod@gmail.com>",
   "contributors": [],
   "private": false,

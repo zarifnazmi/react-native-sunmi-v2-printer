@@ -7,7 +7,7 @@ import {
   DeviceEventEmitter,
 } from 'react-native';
 
-import SunmiInnerPrinter from 'react-native-sunmi-inner-printer';
+import SunmiV2Printer from 'react-native-sunmi-v2-printer';
 
 const App = () => {
   const [status, setStatus] = useState('');
@@ -18,13 +18,13 @@ const App = () => {
     try {
       listener = DeviceEventEmitter.addListener('PrinterStatus', (action) => {
         switch (action) {
-          case SunmiInnerPrinter.Constants.NORMAL_ACTION:
+          case SunmiV2Printer.Constants.NORMAL_ACTION:
             setStatus(() => 'printer normal');
             break;
-          case SunmiInnerPrinter.Constants.OUT_OF_PAPER_ACTION:
+          case SunmiV2Printer.Constants.OUT_OF_PAPER_ACTION:
             setStatus(() => 'printer out out page');
             break;
-          case SunmiInnerPrinter.Constants.COVER_OPEN_ACTION:
+          case SunmiV2Printer.Constants.COVER_OPEN_ACTION:
             setStatus(() => 'printer cover open');
             break;
           default:
@@ -59,50 +59,50 @@ const App = () => {
     let columnWidth = [25, 1, 5];
     try {
       //set aligment: 0-left,1-center,2-right
-      await SunmiInnerPrinter.setAlignment(1);
+      await SunmiV2Printer.setAlignment(1);
 
       //图片bitmap对象(最大宽度384像素，超过无法打印并且回调callback异常函数)
-      await SunmiInnerPrinter.printBitmap(
+      await SunmiV2Printer.printBitmap(
         logobase64,
         384 /*width*/,
         380 /*height*/,
       );
-      //SunmiInnerPrinter.commitPrinterBuffer();
+      //SunmiV2Printer.commitPrinterBuffer();
 
-      await SunmiInnerPrinter.setFontSize(40);
-      await SunmiInnerPrinter.printOriginalText('Title name\n');
-      await SunmiInnerPrinter.setFontSize(50);
-      await SunmiInnerPrinter.printOriginalText('Subtitle name\n');
-      await SunmiInnerPrinter.setFontSize(20);
-      await SunmiInnerPrinter.setAlignment(0);
-      await SunmiInnerPrinter.printOriginalText('Receipt ID: 1234567890\n');
-      await SunmiInnerPrinter.printOriginalText(`Date: 2020-11-25 15:00:00\n`);
-      await SunmiInnerPrinter.printOriginalText(
+      await SunmiV2Printer.setFontSize(40);
+      await SunmiV2Printer.printOriginalText('Title name\n');
+      await SunmiV2Printer.setFontSize(50);
+      await SunmiV2Printer.printOriginalText('Subtitle name\n');
+      await SunmiV2Printer.setFontSize(20);
+      await SunmiV2Printer.setAlignment(0);
+      await SunmiV2Printer.printOriginalText('Receipt ID: 1234567890\n');
+      await SunmiV2Printer.printOriginalText(`Date: 2020-11-25 15:00:00\n`);
+      await SunmiV2Printer.printOriginalText(
         '===============================\n',
       );
-      await SunmiInnerPrinter.setFontSize(22);
+      await SunmiV2Printer.setFontSize(22);
       for (var i in orderList) {
         console.log(orderList[i]);
         console.log(columnWidth);
         console.log(columnAliment);
-        await SunmiInnerPrinter.printColumnsText(
+        await SunmiV2Printer.printColumnsText(
           orderList[i],
           columnWidth,
           columnAliment,
         );
       }
-      await SunmiInnerPrinter.setFontSize(20);
-      await SunmiInnerPrinter.printOriginalText(
+      await SunmiV2Printer.setFontSize(20);
+      await SunmiV2Printer.printOriginalText(
         '===============================\n',
       );
-      await SunmiInnerPrinter.setAlignment(2);
-      await SunmiInnerPrinter.setFontSize(30);
-      await SunmiInnerPrinter.printOriginalText('Total: $200\n');
-      await SunmiInnerPrinter.setFontSize(20);
-      await SunmiInnerPrinter.printOriginalText(
+      await SunmiV2Printer.setAlignment(2);
+      await SunmiV2Printer.setFontSize(30);
+      await SunmiV2Printer.printOriginalText('Total: $200\n');
+      await SunmiV2Printer.setFontSize(20);
+      await SunmiV2Printer.printOriginalText(
         '===============================\n',
       );
-      await SunmiInnerPrinter.printOriginalText('\n\n');
+      await SunmiV2Printer.printOriginalText('\n\n');
     } catch (e) {
       console.log(e);
     }

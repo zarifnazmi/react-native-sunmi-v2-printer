@@ -1,4 +1,4 @@
-package com.sunmi.innerprinter;
+package com.sunmi.v2.printer;
 
 import java.io.Closeable;
 import java.io.File;

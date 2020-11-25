@@ -181,7 +181,7 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-sunmi-inner-printer')
+    compile project(':react-native-sunmi-v2-printer')
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
