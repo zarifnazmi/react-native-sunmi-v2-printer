@@ -58,14 +58,14 @@ compile project(':react-native-sunmi-v2-printer')
 * adds package references to  MainPackage.java
 
 ```java
-import com.sunmi.innerprinter.SunmiInnerPrinterPackage;
+import com.sunmi.v2.printer.SunmiV2PrinterPackage;
 ...
 
  @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new SunmiInnerPrinterPackage()
+          new SunmiV2PrinterPackage()
       );
     }
 ```
@@ -82,27 +82,27 @@ import SunmiV2Printer from 'react-native-sunmi-v2-printer';
 
 ### Constants
 
-| Name | Description|
-|:-----:|:-----------:|
-| Constants | 打印状态常量 |
-| hasPrinter | boolean,是否有打印机 |
-| printerVersion | 打印机固件版本 |
-| printerSerialNo | 打印机序列号 |
-| printerModal | 打印机型号 |
+| Name | Type| Description |
+|:-----:|:-----:|:-----------:|
+| Constants | string | Printer's status |
+| hasPrinter | boolean | Is printer available |
+| printerVersion | string | Printer's version |
+| printerSerialNo | string | Printer's serial number |
+| printerModal | string | Printer's model |
 
 ### Printer Status
 
 |  Name | Description |
 |:-----:|:-----------:|
-| OUT_OF_PAPER_ACTION | 缺纸异常 |
-| ERROR_ACTION | 打印错误 |
-| NORMAL_ACTION | 可以打印 |
-| COVER_OPEN_ACTION | 开盖子 |
-| COVER_ERROR_ACTION | 关盖子异常 |
+| OUT_OF_PAPER_ACTION | Printer of paper |
+| ERROR_ACTION | Printing error |
+| NORMAL_ACTION | Printing normal |
+| COVER_OPEN_ACTION | Printer's cover has open |
+| COVER_ERROR_ACTION | Printer's cover is unusal |
 | KNIFE_ERROR_1_ACTION | 切刀异常1－卡切刀 |
 | KNIFE_ERROR_2_ACTION | 切刀异常2－切刀修复 |
-| OVER_HEATING_ACITON | 打印头过热异常 |
-| FIRMWARE_UPDATING_ACITON | 打印机固件开始升级 |
+| OVER_HEATING_ACITON | Printer is overheat |
+| FIRMWARE_UPDATING_ACITON | Upgrade printer's firmware |
 
 ### Example
 
