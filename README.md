@@ -1,30 +1,31 @@
+
 # react-native-sunmi-v2-printer
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/januslo/react-native-sunmi-inner-printer/master/LICENSE) [![npm version](https://badge.fury.io/js/react-native-sunmi-inner-printer.svg)](https://www.npmjs.com/package/react-native-sunmi-inner-printer)
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/suraneti/react-native-sunmi-inner-printer/master/LICENSE) [![npm version](https://badge.fury.io/js/react-native-sunmi-v2-printer.svg)](https://www.npmjs.com/package/react-native-sunmi-v2-printer)
 
-http://docs.sunmi.com/htmls/index.html?lang=zh##V1文档资源
-根据商米V1文档开发打印接口
-(React native plugin Referring the sunmi V2 printer document and demos)
+## SUNMI V2 Printer for React-Native
 
-**Caution: this is not the official project. I share it because I am working on this device but no any official support in react-native It's welcome to ask any question about the usage,problems or feature required, I will support ASAP.**
+### Caution: this is not the official project and forked form https://github.com/januslo/react-native-sunmi-inner-printer
 
-Offical Demos plz refer: https://github.com/shangmisunmi/SunmiPrinterDemo
+Offical Demos refer: https://github.com/shangmisunmi/SunmiPrinterDemo
 
-for scanner, refer this: https://github.com/suraneti/react-native-sunmi-v2-scanner
-
-## Installation:
+## Installation
 
 **Step 1.**
 
-install with npm: [Check in NPM](https://www.npmjs.com/package/react-native-sunmi-v2-printer)
+Install via NPM
 
 ```bash
 npm install react-native-sunmi-v2-printer --save
-or 
+```
+
+Install via Yarn
+
+```bash
 yarn add react-native-sunmi-v2-printer
 ```
 
-or you may need to install via the clone address directly:
+Install from source
 
 ```bash
 npm install https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
@@ -40,6 +41,7 @@ react-native link react-native-sunmi-v2-printer
 ```
 
 or you may need to link manually
+
 * modify settings.gradle
 
 ```javascript
@@ -56,7 +58,6 @@ compile project(':react-native-sunmi-v2-printer')
 * adds package references to  MainPackage.java
 
 ```java
-
 import com.sunmi.innerprinter.SunmiInnerPrinterPackage;
 ...
 
@@ -67,24 +68,20 @@ import com.sunmi.innerprinter.SunmiInnerPrinterPackage;
             new SunmiInnerPrinterPackage()
       );
     }
-
 ```
 
 **Step 3:**
 
-refer in the javascript:
+Import in React-Native:
+
 ```javascript
-import SunmiInnerPrinter from 'react-native-sunmi-v2-printer';
-
+import SunmiV2Printer from 'react-native-sunmi-v2-printer';
 ```
-
-## Usage & Demo:
-See examples folder of the source code that you can find a simple example of printing receipt.
-// TODO
 
 ## API
 
 ### Constants
+
 | Name | Description|
 |:-----:|:-----------:|
 | Constants | 打印状态常量 |
@@ -92,7 +89,6 @@ See examples folder of the source code that you can find a simple example of pri
 | printerVersion | 打印机固件版本 |
 | printerSerialNo | 打印机序列号 |
 | printerModal | 打印机型号 |
-
 
 ### Printer Status
 
@@ -111,4 +107,3 @@ See examples folder of the source code that you can find a simple example of pri
 ### Example
 
 Please check on `example/` floder
-
