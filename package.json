@@ -1,16 +1,16 @@
 {
   "name": "react-native-sunmi-v2-printer",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Sunmi V2 Printer for React-Native",
   "author": "Suraneti Rodsuwan <suraneti.rod@gmail.com>",
   "contributors": [],
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/suraneti/react-native-sunmi-inner-printer"
+    "url": "https://github.com/suraneti/react-native-sunmi-v2-printer"
   },
   "bugs": {
-    "url": "https://github.com/suraneti/react-native-sunmi-inner-printer/issues"
+    "url": "https://github.com/suraneti/react-native-sunmi-v2-printer/issues"
   },
   "main": "index.js",
   "scripts": {
