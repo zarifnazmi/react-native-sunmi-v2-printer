@@ -20,29 +20,31 @@ install with npm: [Check in NPM](https://www.npmjs.com/package/react-native-sunm
 
 ```bash
 npm install react-native-sunmi-v2-printer --save
+or 
+yarn add react-native-sunmi-v2-printer
 ```
 
 or you may need to install via the clone address directly:
 
 ```bash
 npm install https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
+yarn add https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
 ```
 
-**Step 2:**
+**Step 2:** (For React-Native < 0.60)
 
-For React-Native < 0.60
 Links this plugin to your project.
 
 ```bash
-react-native link react-native-sunmi-inner-printer
+react-native link react-native-sunmi-v2-printer
 ```
 
 or you may need to link manually
 * modify settings.gradle
 
 ```javascript
-include ':react-native-sunmi-inner-printer'
-project(':react-native-sunmi-inner-printer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sunmi-inner-printer/android')
+include ':react-native-sunmi-v2-printer'
+project(':react-native-sunmi-v2-printer').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sunmi-v2-printer/android')
 ```
 
 * modify  app/build.gradle,add dependenceie：
@@ -72,7 +74,7 @@ import com.sunmi.innerprinter.SunmiInnerPrinterPackage;
 
 refer in the javascript:
 ```javascript
-import SunmiInnerPrinter from 'react-native-sunmi-inner-printer';
+import SunmiInnerPrinter from 'react-native-sunmi-v2-printer';
 
 ```
 
@@ -106,42 +108,7 @@ See examples folder of the source code that you can find a simple example of pri
 | OVER_HEATING_ACITON | 打印头过热异常 |
 | FIRMWARE_UPDATING_ACITON | 打印机固件开始升级 |
 
-#### Example
+### Example
 
-```javascript
-import React, { Component } from 'react';
-import { View, Text, DeviceEventEmitter } from 'react-native';
-import SunmiInnerPrinter from 'react-native-sunmi-inner-printer';
+Please check on `example/` floder
 
-class PrinterComponent extends Component {
-    componentWillMount() {
-        this._printerStatusListener = DeviceEventEmitter.addListener('PrinterStatus', action => {
-            switch(action) {
-                case SunmiInnerPrinter.Constants.NORMAL_ACTION:   // 可以打印
-                    // your code
-                    break;
-                case SunmiInnerPrinter.Constants.OUT_OF_PAPER_ACTION:  // 缺纸异常
-                    // your code
-                    break;
-                case SunmiInnerPrinter.Constants.COVER_OPEN_ACTION:   // 开盖子
-                    // your code
-                    break;
-                default:
-                    // your code
-            }
-        });
-    }
-    
-    componentWillUnmount() {
-        this._printerStatusListener.remove();
-    }
-
-    render() {
-        return (
-            <View>
-                <Text>Hello World!</Text>
-            </View>
-        )
-    }
-}
-```
