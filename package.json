@@ -7,7 +7,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/suraneti/react-native-sunmi-v2-printer"
+    "url": "https://github.com/suraneti/react-native-sunmi-v2-printer.git"
   },
   "bugs": {
     "url": "https://github.com/suraneti/react-native-sunmi-v2-printer/issues"
@@ -25,5 +25,9 @@
   "peerDependencies": {
     "react": "16.13.1",
     "react-native": "^0.63.3"
+  },
+  "homepage": "https://github.com/suraneti/react-native-sunmi-v2-printer#readme",
+  "directories": {
+    "example": "example"
   }
 }
