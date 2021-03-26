@@ -76,4 +76,25 @@ public class CashDrawer extends ReactContextBaseJavaModule {
             callBack.invoke(service, woyouService);
         }
     }
+    
+    @ReactMethod
+    public void cutPaper(Callback callBack) {
+        final IWoyouService service = woyouService;
+        if (service != null) {
+            byte[] mCutPaperCommand = new byte[4];
+            mCutPaperCommand[0] = 0x1d;
+            mCutPaperCommand[1] = 0x56;
+            mCutPaperCommand[2] = 0x42;
+            mCutPaperCommand[3] = 0x00;
+
+            try {
+                service.sendRAWData(mCutPaperCommand, null);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+                callBack.invoke(false);
+            }
+        } else {
+            callBack.invoke(service, woyouService);
+        }
+    }
 }
