@@ -1,7 +1,7 @@
 
 # react-native-sunmi-v2-printer
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/suraneti/react-native-sunmi-inner-printer/master/LICENSE) [![npm version](https://badge.fury.io/js/react-native-sunmi-v2-printer.svg)](https://www.npmjs.com/package/react-native-sunmi-v2-printer)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE) 
 
 ## SUNMI V2 Printer for React-Native
 
@@ -13,23 +13,11 @@ Offical Demos refer: https://github.com/shangmisunmi/SunmiPrinterDemo
 
 **Step 1.**
 
-Install via NPM
-
-```bash
-npm install react-native-sunmi-v2-printer --save
-```
-
-Install via Yarn
-
-```bash
-yarn add react-native-sunmi-v2-printer
-```
-
 Install from source
 
 ```bash
-npm install https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
-yarn add https://github.com/suraneti/react-native-sunmi-v2-printer.git --save
+npm install https://github.com/kev-ac/react-native-sunmi-v2-printer.git --save
+yarn add https://github.com/kev-ac/react-native-sunmi-v2-printer.git --save
 ```
 
 **Step 2:** (For React-Native < 0.60)
