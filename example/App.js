@@ -13,9 +13,12 @@ const App = () => {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    listener = null;
-
+    let listener = null;
+    
     try {
+      /* Init the printer. Without this no events will be fired. */
+      SunmiV2Printer.printerInit();
+      
       listener = DeviceEventEmitter.addListener('PrinterStatus', (action) => {
         switch (action) {
           case SunmiV2Printer.Constants.NORMAL_ACTION:
