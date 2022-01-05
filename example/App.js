@@ -7,7 +7,7 @@ import {
   DeviceEventEmitter,
 } from 'react-native';
 
-import SunmiV2Printer from 'react-native-sunmi-v2-printer';
+import {SunmiV2Printer} from 'react-native-sunmi-v2-printer';
 
 const App = () => {
   const [status, setStatus] = useState('');
