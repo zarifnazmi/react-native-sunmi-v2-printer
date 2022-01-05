@@ -5,7 +5,7 @@
 
 ## SUNMI V2 Printer for React-Native
 
-### Caution: this is not the official project and forked form https://github.com/januslo/react-native-sunmi-inner-printer
+This project is forked from [jeylabs/react-native-sunmi-v2-printer](https://github.com/jeylabs/react-native-sunmi-v2-printer).
 
 Offical Demos refer: https://github.com/shangmisunmi/SunmiPrinterDemo
 
